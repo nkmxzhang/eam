@@ -14,10 +14,10 @@ namespace eam
 template <typename T> 
 class Singleton  
 {  
-	static T* ms_instance;  
+	static T* _instance;  
 public:  
-	static T* Get();
-	static void Free();
+	static T* instance();
+	static void release();
 protected:  
 	Singleton(){};
 	virtual ~Singleton(){}; 
@@ -26,23 +26,23 @@ protected:
 };  
 
 
-template <class T> T* Singleton<T>::ms_instance = 0;
+template <class T> T* Singleton<T>::_instance = 0;
 
 
 
-template <class T> T* Singleton<T>::Get()  
+template <class T> T* Singleton<T>::instance()  
 {  
-	if(!ms_instance)  
-		ms_instance = new T();  
-	return ms_instance;  
+	if(!_instance)  
+		_instance = new T();  
+	return _instance;  
 }
 
-template <class T> void Singleton<T>::Free()  
+template <class T> void Singleton<T>::release()  
 {  
-	if( ms_instance )  
+	if( _instance )  
 	{  
-		delete ms_instance;  
-		ms_instance = 0;  
+		delete _instance;  
+		_instance = 0;  
 	}  
 }
 

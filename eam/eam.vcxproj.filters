@@ -13,6 +13,9 @@
       <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
       <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
     </Filter>
+    <Filter Include="packer">
+      <UniqueIdentifier>{a61555b5-c2f6-474a-ba79-095f032e683a}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="stdafx.h">
@@ -27,6 +30,12 @@
     <ClInclude Include="include\Singleton.h">
       <Filter>头文件</Filter>
     </ClInclude>
+    <ClInclude Include="packer\include\Packer.h">
+      <Filter>packer</Filter>
+    </ClInclude>
+    <ClInclude Include="packer\include\PackerFactory.h">
+      <Filter>packer</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="stdafx.cpp">
@@ -37,6 +46,9 @@
     </ClCompile>
     <ClCompile Include="src\Concurrency.cpp">
       <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="packer\PackerFactory.cpp">
+      <Filter>packer</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>

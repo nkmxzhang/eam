@@ -109,7 +109,7 @@ typedef unsigned long ULONG;
 		virtual ~ThreadStateRunning(){}
 		virtual int stop(ThreadBase* tb);
 
-		static ThreadStateRunning* instance(){return Singleton<ThreadStateRunning>::Get();}
+		static ThreadStateRunning* instance(){return Singleton<ThreadStateRunning>::instance();}
 	};
 
 	class OUTPUT_DLL ThreadStateStoped : public ThreadState, public Singleton<ThreadStateStoped>
@@ -119,7 +119,7 @@ typedef unsigned long ULONG;
 		virtual ~ThreadStateStoped(){}
 		virtual int start(PTR_THREAD_ENTRANCE pEntrance, void* params, ThreadBase* tb);
 
-		static ThreadStateStoped* instance(){return Singleton<ThreadStateStoped>::Get();}
+		static ThreadStateStoped* instance(){return Singleton<ThreadStateStoped>::instance();}
 	};
 
 	//base thread
